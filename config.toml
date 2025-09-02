@@ -1,4 +1,4 @@
-base_url = "https://parnianlali.github.io/cv/"
+base_url = "https://parnianlali.github.io/CV/"
 languageCode = "en"
 title = 'CV | Parnian'
 disableKinds = ["taxonomy", "term"]
