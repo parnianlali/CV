@@ -126,6 +126,7 @@ body {
 .cv-sidebar-heading {
   border-bottom: 1px solid;
   text-transform: uppercase;
+  color:var(--accentColor);
 }
 
 .cv-contact {
@@ -196,7 +197,19 @@ body {
   .cv-education-item--name,
   .cv-jobs-item--name {
     font-size: 1.3em;
-    text-align: right;
+    text-align: left;
+    font-weight: bold;
+    color: var(--accentColor); 
+    
+    em {
+      font-size: 0.85em;  
+      font-weight: bold;  
+    }
+  }
+
+  .cv-education-item--info,
+  .cv-jobs-item--info {
+    text-align: left;  
   }
 
   .cv-education-item--description,
@@ -215,27 +228,40 @@ body {
       text-align: left;
       margin-top: 0.5em;
     }
+
+    .cv-education-item--info,
+    .cv-jobs-item--info {
+      text-align: left; 
+    }
   }
 }
 
 .cv-projects-item {
   margin-bottom: 1em;
+  
   .cv-projects-item-header {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    align-items: center;
-
-    @include breakpoint-xs {
-      grid-template-columns: 1fr;
-      .cv-projects-item--info {
-        margin: 0.2em 0 0.4em 0;
-      }
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
 
     .cv-projects-item--name {
       font-size: 1.3em;
       font-weight: bold;
       color: var(--accentColor);
+      order: 1;
+    }
+
+    .cv-projects-item--info {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2em;
+      
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+      }
     }
   }
 }
@@ -306,4 +332,58 @@ button {
   .cv {
     height: 100%;
   }
+}
+
+
+
+.cv-currentresearch-item {
+  margin-bottom: 1em;
+  
+  .cv-currentresearch-item-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+
+    .cv-currentresearch-item--name {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: var(--accentColor);
+      order: 1;
+    }
+
+    .cv-currentresearch-item--info {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2em;
+      
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+      }
+    }
+  }
+}
+
+.cv-extracurricular-list {
+  list-style: none;   /* removes the circles */
+  padding-left: 0;    /* removes left indentation */
+  margin: 0;
+}
+
+.cv-opensource-contribution {
+  margin-bottom: 12px;  /* spacing between items */
+}
+
+.cv-opensource-contribution i {
+  margin-right: 6px;    /* spacing between icon and text */
+  color: var(--accentColor);       /* choose your icon color */
+}
+
+
+
+.cv-opensource-contribution a {
+  color: inherit;
+  text-decoration: none;
 }

@@ -1,6 +1,6 @@
-baseURL = 'https://cv.diogotc.com'
-languageCode = 'en-us'
-title = 'CV | Diogo Correia'
+base_url = "http://localhost:1313"
+languageCode = "en"
+title = 'CV | Parnian'
 disableKinds = ["taxonomy", "term"]
 
 defaultContentLanguage = 'en'
@@ -10,8 +10,3 @@ defaultContentLanguage = 'en'
     weight = 1
     [languages.en.params]
       datasource = 'content.en'
-  [languages.pt]
-    languageName = "Portuguese"
-    weight = 2
-    [languages.pt.params]
-      datasource = 'content.pt'

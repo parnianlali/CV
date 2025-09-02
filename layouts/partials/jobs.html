@@ -5,6 +5,7 @@
   </h2>
   {{ range . }}
     <div class="cv-jobs-item">
+      <div class="cv-jobs-item--name">{{ .name | markdownify }}</div>
       <div class="cv-jobs-item--info">
         <div>
           <i class="fa-solid fa-calendar-days"></i>
@@ -15,7 +16,6 @@
           {{ .location | markdownify }}
         </div>
       </div>
-      <div class="cv-jobs-item--name">{{ .name | markdownify }}</div>
       <div class="cv-jobs-item--description">{{ .description | markdownify }}</div>
     </div>
   {{ end }}

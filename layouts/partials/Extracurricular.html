@@ -1,0 +1,24 @@
+<div class="cv-opensource">
+  <h2 class="cv-sidebar-heading">
+    {{ i18n "section-header.Extracurricular-Activities" }}
+  </h2>
+  <ul class="cv-extracurricular-list">
+    {{ range .contributions }}
+      <li class="cv-opensource-contribution">
+        {{ if .link }}
+          <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+            <i class="{{ .icon }}"></i>
+            <strong>{{ .name }}</strong>
+            <i class="fa-solid fa-link"></i>
+          </a>
+        {{ else }}
+          <i class="{{ .icon }}"></i>
+          <strong>{{ .name }}</strong>
+        {{ end }}
+        <br />
+        <span class="cv-opensource-description">{{ .description }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+

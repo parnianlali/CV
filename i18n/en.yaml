@@ -1,11 +1,13 @@
 section-header:
   contact: Contact
   skills: Skills
-  open-source: Open Source
+  selectedcourse: Selected IUT Courses
+  onlinecourse: Online Courses
+  Extracurricular-Activities: Extracurricular Activities
   miscellaneous: Misc
   education: Education
   work: Professional Experience
+  currentresearch: Current Research
   projects: Projects
-  extra-curriculars: Extra Curriculars
 projects:
-  footer-message: "... and many other small projects"
+  footer-message: ""
